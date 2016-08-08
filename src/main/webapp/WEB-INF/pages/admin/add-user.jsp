@@ -87,8 +87,8 @@
 												*</label> <select id="ddlGender" name="ddlGender"
 												data-rule-required="true" class="form-control">
 												<option value="">-- សូមធ្វើការជ្រើសរើស --</option>
-												<option value="male">ប្រុស</option>
-												<option value="female">ស្រី</option>
+												<option value="ប្រុស">ប្រុស</option>
+												<option value="ស្រី">ស្រី</option>
 											</select>
 										</div>
 										<div class="form-group">
@@ -96,8 +96,8 @@
 												*</label> <select id="ddlRole" name="ddlRole"
 												data-rule-required="true" class="form-control">
 												<option value="">-- សូមធ្វើការជ្រើសរើស --</option>
-												<option value="admin">អ្នកគ្រប់គ្រងប្រព័ន្ធ</option>
-												<option value="subscriber">អ្នកប្រើប្រាស់</option>
+												<option value="1">អ្នកគ្រប់គ្រងប្រព័ន្ធ</option>
+												<option value="2">អ្នកប្រើប្រាស់</option>
 											</select>
 										</div>
 										<div class="form-group">
