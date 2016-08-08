@@ -27,12 +27,13 @@
 							<div class="blog-image">
 								<div
 									class='embed-container embed-responsive embed-responsive-4by3'>
-									<iframe
-										src="https://docs.google.com/presentation/d/139dm7ykBfErqY025fjfYG34NrsVTMHqFWt6Thcawi4o/embed?start=true&loop=true&delayms=30000"
+									<!-- <iframe
+										src="https://docs.google.com/presentation/d/1E59nEYMieNSMEZlAVpbbDggJtiCuLoLr4_8Tn-MXL2g/embed?start=true&loop=true&delayms=30000"
 										frameborder="0"
 										allowfullscreen="true" mozallowfullscreen="true" 
-										webkitallowfullscreen="true" allowprint="true"></iframe>
+										webkitallowfullscreen="true" allowprint="true"></iframe> -->
 										<!-- <iframe src="https://drive.google.com/file/d/0B2WJOSpqcAkyLW1wWFBuNm1FNTA/preview" width="640" height="480"></iframe> -->
+										<iframe src="https://drive.google.com/file/d/0BxYRX7DKrlC4MWRkcmtqSXA2VEE/preview" width="640" height="480"></iframe>
 								</div>
 							</div>
 							<!-- end blog-image -->
@@ -70,7 +71,7 @@
 										style="padding: 0px 10px; color: #333333; cursor: pointer;"
 										onclick="#"></i><strong><b
 											style="color: #007500;">3</b></strong></span>
-											<a target="_blank" href="https://docs.google.com/presentation/d/id=139dm7ykBfErqY025fjfYG34NrsVTMHqFWt6Thcawi4o/export/pptx">Download File</a>
+											<a target="_blank" href="https://doc-0s-00-docs.googleusercontent.com/docs/securesc/o8d3aeh10i695dohadddsupdtrqm10sq/i18iu7g1h3v8nv968putrm5u470meqjm/1470650400000/04935114392850846203/08106199349295072376/0BxYRX7DKrlC4cnhIWHVCbHA2NEk?e=download">Download File</a>
 
 									<div class="btn-group">
 

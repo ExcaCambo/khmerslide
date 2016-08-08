@@ -15,34 +15,9 @@ import org.springframework.web.client.RestTemplate;
 
 
 @RestController
-@RequestMapping("/rest/user")
-public class UserController {
-	
-//	@RequestMapping(value = { "/", "/index", "/home" })
-//	public String adminPage() {
-//		return "user/index";
-//	}
-//	
-//	@RequestMapping(value = { "/upload-file"})
-//	public String uploadPage() {
-//		return "user/upload-file";
-//	}
-//	
-//	@RequestMapping(value = { "/history"})
-//	public String historyPage() {
-//		return "user/view-history";
-//	}
-//	
-//	@RequestMapping(value = { "/my-document"})
-//	public String myDocumentPage() {
-//		return "user/my-document";
-//	}
-//	
-//	@RequestMapping(value = { "/save-list"})
-//	public String saveListPage() {
-//		return "user/save-list";
-//	}
-	
+@RequestMapping("/rest/user-type")
+public class UserTypeController {
+		
 	@Autowired
 	private HttpHeaders header;
 	
@@ -53,9 +28,9 @@ public class UserController {
 	private String WS_URL;
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public ResponseEntity<Map<String , Object>> user(){
+	public ResponseEntity<Map<String , Object>> userType(){
 		HttpEntity<Object> request = new HttpEntity<Object>(header);
-		ResponseEntity<Map> response = rest.exchange(WS_URL + "/user/", HttpMethod.GET , request , Map.class) ;
+		ResponseEntity<Map> response = rest.exchange(WS_URL + "/user-type/get-user-type/", HttpMethod.GET , request , Map.class) ;
 		return new ResponseEntity<Map<String , Object>>(response.getBody() , HttpStatus.OK);
 	}
 	
