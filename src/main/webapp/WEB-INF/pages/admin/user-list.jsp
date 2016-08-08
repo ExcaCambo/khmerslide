@@ -82,7 +82,7 @@
 											</div>
 										</td>
 										<td>{{u.GENDER}}</td>
-										<td>Administrator</td>
+										<td>{{(u.ROLE.ROLE_NAME) == 'admin' ? 'អ្នកគ្រប់គ្រងប្រព័ន្ធ':'អ្នកប្រើប្រាស់' }}</td>
 										<td class="text-center" ng-class="(u.STATUS == 1) ? 'text-success':'text-danger'"><i ng-class="(u.STATUS == 1) ? 'ti-check' : 'ti-close'"></i></td>
 										<td>
 											<div role="toolbar" aria-label="Toolbar with button groups"
