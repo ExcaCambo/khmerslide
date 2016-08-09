@@ -24,4 +24,4 @@
 
 			$scope.list();
 });
-//	angular.module("CombineModule", ["userList", "userTypeList"]);
+	angular.module("CombineModule", ["userList", "userTypeList"]);

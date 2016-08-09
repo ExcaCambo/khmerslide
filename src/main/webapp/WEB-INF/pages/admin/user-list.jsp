@@ -78,7 +78,7 @@
 														class="status bg-success"></span>
 												</div>
 												<div class="media-body">
-													<h5 class="media-heading">{{u.NAME}}</h5>
+													<h5 class="media-heading">{{u.USER_NAME}}</h5>
 													<p class="text-muted mb-0">អីុមែល: {{u.EMAIL}}</p>
 												</div>
 											</div>
