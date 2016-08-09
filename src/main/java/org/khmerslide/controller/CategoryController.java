@@ -54,7 +54,7 @@ public class CategoryController {
 	private String WS_URL;
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public ResponseEntity<Map<String , Object>> user(
+	public ResponseEntity<Map<String , Object>> category(
 										  @RequestParam(value = "page", required = false , defaultValue="1") int page 
 									    , @RequestParam(value="item" , required = false , defaultValue="10") int item){
 		HttpEntity<Object> request = new HttpEntity<Object>(header);
