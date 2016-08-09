@@ -89,5 +89,5 @@
             <li><a href="login.jsp"><i class="ti-power-off mr-5"></i> ចាកចេញ</a></li>
           </ul>
         </li>
-        <li><a href="javascript:;" role="button" class="right-sidebar-toggle bubble header-icon"><i class="ti-layout-sidebar-right"></i><span class="dot bg-danger"></span></a></li>
+        <li><a href="javascript:;" role="button" class="right-sidebar-toggle bubble header-icon"><i class="ti-layout-sidebar-right"></i></a></li>
       </ul>

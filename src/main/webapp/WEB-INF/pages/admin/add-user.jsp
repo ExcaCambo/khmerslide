@@ -87,17 +87,16 @@
 												*</label> <select id="ddlGender" name="ddlGender"
 												data-rule-required="true" class="form-control">
 												<option value="">-- សូមធ្វើការជ្រើសរើស --</option>
-												<option value="male">ប្រុស</option>
-												<option value="female">ស្រី</option>
+												<option value="ប្រុស">ប្រុស</option>
+												<option value="ស្រី">ស្រី</option>
 											</select>
 										</div>
-										<div class="form-group">
+										<div class="form-group" ng-app="userTypeList" ng-controller="userTypeListCtrl">
 											<label for="ddlRole">តួនាទី</label><label class="text-danger">
 												*</label> <select id="ddlRole" name="ddlRole"
 												data-rule-required="true" class="form-control">
 												<option value="">-- សូមធ្វើការជ្រើសរើស --</option>
-												<option value="admin">អ្នកគ្រប់គ្រងប្រព័ន្ធ</option>
-												<option value="subscriber">អ្នកប្រើប្រាស់</option>
+												<option value="{{ut.ROLE_ID}}"  ng-repeat="ut in userType">{{(ut.ROLE_NAME) == 'admin' ? 'អ្នកគ្រប់គ្រងប្រព័ន្ធ':'អ្នកប្រើប្រាស់'}}</option>
 											</select>
 										</div>
 										<div class="form-group">
@@ -130,7 +129,7 @@
 		</div>
 	</div>
 	<!-- Right Sidebar start-->
-	<jsp:include page="../include/admin/right-side-bar.jsp"></jsp:include>
+	<%-- <jsp:include page="../include/admin/right-side-bar.jsp"></jsp:include> --%>
 	<!-- Right Sidebar end-->
 	</div>
 

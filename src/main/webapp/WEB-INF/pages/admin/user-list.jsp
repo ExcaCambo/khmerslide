@@ -7,7 +7,7 @@
 <jsp:include page="../include/admin/css-include.jsp"></jsp:include>
 <%-- <%@ include file="../include/css-include.jsp" %> --%>
 </head>
-<body data-sidebar-color="sidebar-light" class="sidebar-light" ng-app="userList" ng-controller="userListCtrl">
+<body data-sidebar-color="sidebar-light" class="sidebar-light" ng-app="userList">
 	<!-- Header start-->
 	<header>
 		<!-- including header from include/admin/header.jsp -->
@@ -49,7 +49,7 @@
 				<!-- including user-board from include/admin/user-board-include.jsp -->
 				<jsp:include page="../include/admin/user-board-include.jsp"></jsp:include>
 
-				<div class="row">
+				<div class="row" ng-controller="userListCtrl">
 					<div class="col-md-12">
 						<div class="widget no-border">
 							<table id="user-list-table" style="width: 100%"
@@ -82,7 +82,7 @@
 											</div>
 										</td>
 										<td>{{u.GENDER}}</td>
-										<td>Administrator</td>
+										<td>{{(u.ROLE.ROLE_NAME) == 'admin' ? 'អ្នកគ្រប់គ្រងប្រព័ន្ធ':'អ្នកប្រើប្រាស់'}}</td>
 										<td class="text-center" ng-class="(u.STATUS == 1) ? 'text-success':'text-danger'"><i ng-class="(u.STATUS == 1) ? 'ti-check' : 'ti-close'"></i></td>
 										<td>
 											<div role="toolbar" aria-label="Toolbar with button groups"
@@ -110,7 +110,7 @@
 		</div>
 
 		<!-- Right Sidebar start-->
-		<jsp:include page="../include/admin/right-side-bar.jsp"></jsp:include>
+		<%-- <jsp:include page="../include/admin/right-side-bar.jsp"></jsp:include> --%>
 		<!-- Right Sidebar end-->
 	</div>
 

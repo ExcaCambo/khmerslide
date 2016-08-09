@@ -12,53 +12,31 @@
 	<div data-mcs-theme="minimal-dark"
 		class="tab-content nav-sidebar-content mCustomScrollbar">
 		<div id="role" role="tabpanel" class="tab-pane fade in active">
-			<div class="row">
-				<div class="widget ">
+			<div class="row" ng-app="userTypeList" ng-controller="userTypeListCtrl">
+				<div class="widget">
 					<table id="role-table" style="width: 100%"
-						class="table table-hover dt-responsive nowrap">
+						class="table table-hover dt-responsive nowrap" datatable="ng" dt-options="dtOptions">
 						<thead>
 							<tr>
 								<th style="width: 2%">ល.រ</th>
 								<th style="width: 40%">ឈ្មោះ</th>
 								<th style="width: 10%">ស្ថានភាព</th>
+								<th style="width: 10%">ពត៌មានបន្ថែម</th>
 								<th style="width: 35%">សកម្មភាព</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>#1</td>
+							<tr ng-repeat="ut in userType">
+								<td>{{ $index + 1 }}</td>
 								<td>
 									<div class="media">
 										<div class="media-body">
-											<h5 class="media-heading">អ្នកគ្រប់គ្រងប្រព័ន្ធ</h5>
+											<h5 class="media-heading">{{(ut.ROLE_NAME) == 'admin' ? 'អ្នកគ្រប់គ្រងប្រព័ន្ធ':'អ្នកប្រើប្រាស់'}}</h5>
 										</div>
 									</div>
 								</td>
-								<td class="text-center text-success"><i class="ti-check"></i></td>
-								<td>
-									<div role="toolbar" aria-label="Toolbar with button groups"
-										class="btn-toolbar">
-										<div role="group" aria-label="First group" class="btn-group">
-											<button type="button" class="btn btn-outline btn-warning">
-												<i class="ti-pencil"></i>
-											</button>
-											<button type="button" class="btn btn-outline btn-danger">
-												<i class="ti-trash"></i>
-											</button>
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>#2</td>
-								<td>
-									<div class="media">
-										<div class="media-body">
-											<h5 class="media-heading">អ្នកប្រើប្រាស់</h5>
-										</div>
-									</div>
-								</td>
-								<td class="text-center text-danger"><i class="ti-close"></i></td>
+								<td class="text-center" ng-class="(u.STATUS == 1) ? 'text-success':'text-danger'"><i ng-class="(u.STATUS == 1) ? 'ti-check' : 'ti-close'"></i></td>
+								<td>{{ut.DESCRIPTION}}</td>
 								<td>
 									<div role="toolbar" aria-label="Toolbar with button groups"
 										class="btn-toolbar">

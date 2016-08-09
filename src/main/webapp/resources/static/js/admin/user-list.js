@@ -38,4 +38,6 @@ var app = angular.module('userList', ["datatables"]);
 			$scope.list();
 });
 	
+
+	
 	

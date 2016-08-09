@@ -78,5 +78,7 @@
     <!-- Angular Js -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/static/js/angular-datatables.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/static/js/admin/user-list.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/static/js/angular-datatables.min.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/static/js/admin/user-type.js"></script>
+        

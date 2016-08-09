@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-@RequestMapping("/rest/user")
-public class UserController {
+@RequestMapping("/rest/user-type")
+public class UserTypeController {
 	
 //	@RequestMapping(value = { "/", "/index", "/home" })
 //	public String adminPage() {
@@ -54,11 +54,9 @@ public class UserController {
 	private String WS_URL;
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public ResponseEntity<Map<String , Object>> user(
-										  @RequestParam(value = "page", required = false , defaultValue="1") int page 
-									    , @RequestParam(value="item" , required = false , defaultValue="10") int item){
+	public ResponseEntity<Map<String , Object>> userType(){
 		HttpEntity<Object> request = new HttpEntity<Object>(header);
-		ResponseEntity<Map> response = rest.exchange(WS_URL + "/user/get-user/", HttpMethod.GET , request , Map.class) ;
+		ResponseEntity<Map> response = rest.exchange(WS_URL + "/user-type/get-user-type/", HttpMethod.GET , request , Map.class) ;
 		return new ResponseEntity<Map<String , Object>>(response.getBody() , HttpStatus.OK);
 	}
 	
