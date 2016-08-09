@@ -57,3 +57,4 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/static/js/angular-datatables.min.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/resources/static/js/admin/user-type.js"></script>
+

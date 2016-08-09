@@ -131,7 +131,7 @@
 	<!-- Right Sidebar start-->
 	<%-- <jsp:include page="../include/admin/right-side-bar.jsp"></jsp:include> --%>
 	<!-- Right Sidebar end-->
-	</div>
+
 
 	<!-- including js from include/admin/js-include.jsp -->
 	<jsp:include page="../include/admin/js-include.jsp"></jsp:include>
