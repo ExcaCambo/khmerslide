@@ -54,7 +54,6 @@ app.controller('userListCtrl', function($scope, $filter, $http,
 	$scope.photo = "default-user-image.png";
 	$scope.date = $filter('date')(new Date(), 'dd-MMM-yyyy');
 	$scope.insert = function() {
-		// alert($scope.photo);
 		$http({
 			url : 'http://localhost:8080/rest/user',
 			data : {
@@ -91,13 +90,14 @@ app.controller('userListCtrl', function($scope, $filter, $http,
 			$scope.USER_ID = $scope.user.USER_ID;
 			$scope.txtName = $scope.user.USER_NAME;
 			$scope.ddlStatus = $scope.user.STATUS + '';
-			$scope.txtEmail = $scope.user.EMAIL;
+			$scope.ddlGender = $scope.user.GENDER;
 			$scope.txtPassword = $scope.user.PASSWORD;
 			$scope.ddlRole = $scope.user.ROLE.ROLE_ID + '';
 			
 		}, function() {
 
 		});
+	//	alert($scope.ddlGender);
 	}
 	// Get Path Variable from URL
 	var url = $location.absUrl();
@@ -105,14 +105,15 @@ app.controller('userListCtrl', function($scope, $filter, $http,
 	$scope.update(userId);
 
 	$scope.submit = function() {
-//	alert($scope.usertype);
+	//	alert($scope.ddlGender);
+	alert($scope.usertype);
 		
 		$http({
 			url : 'http://localhost:8080/rest/user/',
 			data : {
 				"user_id" : $scope.USER_ID,
 				"user_name" : $scope.txtName,
-				"email" : $scope.txtEmail,
+				"gender" : $scope.ddlGender,
 				"password" : $scope.txtPassword,
 				"status" : $scope.ddlStatus,
 				"role_id" : $scope.usertype
@@ -120,9 +121,9 @@ app.controller('userListCtrl', function($scope, $filter, $http,
 			},
 			method : 'PUT'
 		}).then(function(response) {
-		//	console.log(response);
-			swal("កំណែប្រែ!", "ទិន្នន័យត្រូវបានកែប្រែបានសម្រាច់", "success");
-			window.location.href = "/admin/user-list";
+			console.log(response);
+			//swal("កំណែប្រែ!", "ទិន្នន័យត្រូវបានកែប្រែបានសម្រាច់", "success");
+			//window.location.href = "/admin/user-list";
 		}, function() {
 
 		});

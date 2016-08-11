@@ -79,7 +79,7 @@ public class UserController {
 	}
 	
 	@RequestMapping(method = RequestMethod.PUT)
-	public ResponseEntity<Map<String , Object>> edituser(@RequestBody EditUser editUser){		
+	public ResponseEntity<Map<String , Object>> edituser(@RequestBody EditUser editUser){	
 		HttpEntity<Object> request = new HttpEntity<Object>(editUser,header);
 		ResponseEntity<Map> response = rest.exchange(WS_URL + "/user/update-user", HttpMethod.PUT , request , Map.class) ;
 		return new ResponseEntity<Map<String , Object>>(response.getBody() , HttpStatus.OK);

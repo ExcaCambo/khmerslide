@@ -69,13 +69,15 @@
 											required="required">
 									</div>
 									<div class="form-group">
-										<label for="txtEmail">អីុមែល</label><label class="text-danger">
-											*</label> <input id="txtEmail" type="text" name="txtEmail"
-											ng-model="txtEmail" placeholder="Enter email"
-											data-rule-required="true" data-rule-rangelength="[10,30]"
-											data-rule-email="true" class="form-control"
-											required="required">
-									</div>
+											<label for="ddlGender">ភេទ</label><label class="text-danger" required="required">
+												*</label> <select id="ddlGender" name="ddlGender"
+												ng-model="ddlGender" data-rule-required="true"
+												class="form-control">
+												<option value="">-- សូមធ្វើការជ្រើសរើស --</option>
+												<option value="ប្រុស">ប្រុស</option>
+												<option value="ស្រី">ស្រី</option>
+											</select>
+										</div>
 									<div class="form-group">
 										<label for="txtPassword">លេខសម្ងាត់</label><label
 											class="text-danger"> *</label> <input id="txtPassword"
