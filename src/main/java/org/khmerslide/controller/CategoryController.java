@@ -19,30 +19,6 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/rest/category")
 public class CategoryController {
 	
-//	@RequestMapping(value = { "/", "/index", "/home" })
-//	public String adminPage() {
-//		return "user/index";
-//	}
-//	
-//	@RequestMapping(value = { "/upload-file"})
-//	public String uploadPage() {
-//		return "user/upload-file";
-//	}
-//	
-//	@RequestMapping(value = { "/history"})
-//	public String historyPage() {
-//		return "user/view-history";
-//	}
-//	
-//	@RequestMapping(value = { "/my-document"})
-//	public String myDocumentPage() {
-//		return "user/my-document";
-//	}
-//	
-//	@RequestMapping(value = { "/save-list"})
-//	public String saveListPage() {
-//		return "user/save-list";
-//	}
 	
 	@Autowired
 	private HttpHeaders header;
@@ -57,8 +33,10 @@ public class CategoryController {
 	public ResponseEntity<Map<String , Object>> category(
 										  @RequestParam(value = "page", required = false , defaultValue="1") int page 
 									    , @RequestParam(value="item" , required = false , defaultValue="10") int item){
+		System.out.println("Test");
 		HttpEntity<Object> request = new HttpEntity<Object>(header);
-		ResponseEntity<Map> response = rest.exchange(WS_URL + "/category/?page="+page+"&item="+item, HttpMethod.GET , request , Map.class) ;
+		//ResponseEntity<Map> response = rest.exchange("http://localhost:9999/api/category/get-category?page=1&limit=10", HttpMethod.GET , request , Map.class) ;
+		ResponseEntity<Map> response = rest.exchange(WS_URL + "/category/get-category?page=" + page + "&limit="+ item, HttpMethod.GET , request , Map.class) ;
 		return new ResponseEntity<Map<String , Object>>(response.getBody() , HttpStatus.OK);
 	}
 	
