@@ -2,7 +2,7 @@ var app = angular.module('categoryList', ["datatables"]);
 
 	//create controller
 	app.controller('categoryListCtrl', function ($scope, $http, DTOptionsBuilder) {
-		$scope.categroy = '';
+		$scope.category = '';
 		
 		// DataTables configurable options
 	    $scope.dtOptions = DTOptionsBuilder.newOptions()
