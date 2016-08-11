@@ -7,7 +7,7 @@
 <jsp:include page="../include/admin/css-include.jsp"></jsp:include>
 <%-- <%@ include file="../include/css-include.jsp" %> --%>
 </head>
-<body data-sidebar-color="sidebar-light" class="sidebar-light">
+<body data-sidebar-color="sidebar-light" class="sidebar-light" ng-app="docList" ng-controller="docListCtrl">
 	<!-- Header start-->
 	<header>
 		<!-- including header from include/admin/header.jsp -->
@@ -55,7 +55,7 @@
 					<div class="col-md-12">
 						<div class="widget no-border">
 							<table id="doc-list-table" style="width: 100%"
-								class="table table-hover dt-responsive nowrap">
+								class="table table-hover dt-responsive nowrap" datatable="ng" dt-options="dtOptions">
 								<thead>
 									<tr>
 										<th style="width: 10%">លេងរៀង</th>
@@ -70,8 +70,8 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td>#6546</td>
+									<tr ng-repeat="d in document | orderBy:'DOC_TITLE'">
+										<td>{{$index+1}}</td>
 										<td>
 											<div class="media">
 												<div class="media-left avatar">

@@ -60,7 +60,7 @@
 									<tr>
 										<th style="width: 5%">ល.រ</th>
 										<th style="width: 37%">ចំណងជើងឯកសារ</th>
-										<th style="width: 5%">ប្រភេទឯកសារ</th>
+										<th style="width: 3%">ប្រភេទឯកសារ</th>
 										<th style="width: 10%">ស្ថិតក្នុងមីនុយ</th>
 										<th style="width: 10%">បញ្ចូលដោយ</th>
 										<th style="width: 10%">ពត៌មានផ្សេងៗ</th>
@@ -89,14 +89,13 @@
 										<td>{{d.CATEGORY.CAT_NAME}}</td>
 										<td>{{d.USER.USER_NAME}}</td>
 										<td></td>
-										<td class="text-center"><a data-toggle="modal"
-											data-target=".bs-example-modal-animation" class="text-danger"><i
-												class="ti-close"></i></a></td>
+										<td class="text-center" ng-class="(d.STATUS == 1) ? 'text-success':'text-danger'"><i ng-class="(d.STATUS == 1) ? 'ti-check' : 'ti-close'"></i></td>
 										<td>
 											<div role="toolbar" aria-label="Toolbar with button groups"
 												class="btn-toolbar">
 												<div role="group" aria-label="First group" class="btn-group">
-													<button type="button" class="btn btn-outline btn-success">
+													<button type="button" data-toggle="modal"
+											data-target=".bs-example-modal-animation" class="btn btn-outline btn-success">
 														<i class="ti-eye"></i>
 													</button>
 													<button type="button" class="btn btn-outline btn-warning">
