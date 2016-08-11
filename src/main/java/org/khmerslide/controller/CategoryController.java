@@ -19,31 +19,6 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/rest/category")
 public class CategoryController {
 	
-//	@RequestMapping(value = { "/", "/index", "/home" })
-//	public String adminPage() {
-//		return "user/index";
-//	}
-//	
-//	@RequestMapping(value = { "/upload-file"})
-//	public String uploadPage() {
-//		return "user/upload-file";
-//	}
-//	
-//	@RequestMapping(value = { "/history"})
-//	public String historyPage() {
-//		return "user/view-history";
-//	}
-//	
-//	@RequestMapping(value = { "/my-document"})
-//	public String myDocumentPage() {
-//		return "user/my-document";
-//	}
-//	
-//	@RequestMapping(value = { "/save-list"})
-//	public String saveListPage() {
-//		return "user/save-list";
-//	}
-	
 	@Autowired
 	private HttpHeaders header;
 	
