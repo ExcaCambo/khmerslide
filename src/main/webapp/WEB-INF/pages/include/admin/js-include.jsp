@@ -64,7 +64,7 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/static/js/page-content/charts/other-charts.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/static/js/page-content/forms/forms-validation.js"></script>
     <!-- Sweet Alert -->
-    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/static/plugins/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/static/plugins/sweetalert/dist/sweetalert-dev.js"></script>
 <%--     <!-- Bootstrap TouchSpin-->
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/static/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
     <!-- Bootstrap Tags Input-->

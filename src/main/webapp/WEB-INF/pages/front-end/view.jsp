@@ -27,13 +27,12 @@
 							<div class="blog-image">
 								<div
 									class='embed-container embed-responsive embed-responsive-4by3'>
-									<!-- <iframe
+									<iframe
 										src="https://docs.google.com/presentation/d/1E59nEYMieNSMEZlAVpbbDggJtiCuLoLr4_8Tn-MXL2g/embed?start=true&loop=true&delayms=30000"
 										frameborder="0"
 										allowfullscreen="true" mozallowfullscreen="true" 
-										webkitallowfullscreen="true" allowprint="true"></iframe> -->
+										webkitallowfullscreen="true" allowprint="true"></iframe>
 										<!-- <iframe src="https://drive.google.com/file/d/0B2WJOSpqcAkyLW1wWFBuNm1FNTA/preview" width="640" height="480"></iframe> -->
-										<iframe src="https://drive.google.com/file/d/0BxYRX7DKrlC4MWRkcmtqSXA2VEE/preview" width="640" height="480"></iframe>
 								</div>
 							</div>
 							<!-- end blog-image -->

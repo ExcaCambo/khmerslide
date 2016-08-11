@@ -73,7 +73,7 @@
 											<div class="media">
 												<div class="media-left avatar">
 													<img
-														src="${pageContext.request.contextPath}/resources/static/img/users/21.jpg"
+														src="${pageContext.request.contextPath}/resources/static/img/users/{{ u.PHOTO }}"
 														alt="" class="media-object img-circle"><span
 														class="status bg-success"></span>
 												</div>
@@ -95,10 +95,10 @@
 													<button type="button" class="btn btn-outline btn-success">
 														<i class="ti-eye"></i>
 													</button>
-													<button type="button" class="btn btn-outline btn-warning">
+													<a type="button" href="/admin/edit-user/{{u.USER_ID}}" class="btn btn-outline btn-warning">
 														<i class="ti-pencil"></i>
-													</button>
-													<button type="button" class="btn btn-outline btn-danger">
+													</a>
+													<button type="button" class="btn btn-outline btn-danger" ng-click="remove(u.USER_ID)">
 														<i class="ti-trash"></i>
 													</button>
 												</div>

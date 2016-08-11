@@ -78,7 +78,7 @@
         </li>
         <li class="dropdown visible-lg visible-md"><a id="dropdownMenu2" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle header-icon lh-1 pt-15 pb-15">
             <div class="media mt-0">
-              <div class="media-left avatar"><img src="${pageContext.request.contextPath}/resources/static/img/users/21.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+              <div class="media-left avatar"><img src="${pageContext.request.contextPath}/resources/static/img/users/default-user-image.png" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
               <div class="media-right media-middle pl-0">
                 <p class="fs-12 mb-0">សួរស្តី! Jayz Walker</p>
               </div>
