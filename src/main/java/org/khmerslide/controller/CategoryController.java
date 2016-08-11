@@ -19,7 +19,6 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/rest/category")
 public class CategoryController {
 	
-	
 	@Autowired
 	private HttpHeaders header;
 	

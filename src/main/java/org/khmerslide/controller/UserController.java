@@ -30,12 +30,18 @@ public class UserController {
 	private String WS_URL;
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public ResponseEntity<Map<String , Object>> user(
-										  @RequestParam(value = "page", required = false , defaultValue="1") int page 
-									    , @RequestParam(value="item" , required = false , defaultValue="10") int item){
+	public ResponseEntity<Map<String , Object>> user(){
 		HttpEntity<Object> request = new HttpEntity<Object>(header);
-		ResponseEntity<Map> response = rest.exchange(WS_URL + "/user/get-user/?page="+page+"&item="+item, HttpMethod.GET , request , Map.class) ;
+		ResponseEntity<Map> response = rest.exchange(WS_URL + "/user/", HttpMethod.GET , request , Map.class) ;
 		return new ResponseEntity<Map<String , Object>>(response.getBody() , HttpStatus.OK);
 	}
+	
+//	@RequestMapping(method = RequestMethod.POST)
+//	public ResponseEntity<Map<String , Object>> adduser(@RequestBody AddUser addUser){
+//		HttpEntity<Object> request = new HttpEntity<Object>(addUser,header);
+//		ResponseEntity<Map> response = rest.exchange(WS_URL + "/user", HttpMethod.POST , request , Map.class) ;
+//		return new ResponseEntity<Map<String , Object>>(response.getBody() , HttpStatus.OK);
+//	}
+	
 
 }
